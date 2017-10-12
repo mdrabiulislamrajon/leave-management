@@ -21,7 +21,7 @@
                     <td>{{ config("leave.type." . $leave->type_id) }}</td>
                     <td>
                         <span class="label label-{{ $leave->status == 1 ? 'success' : 'warning' }}">
-                            {{ $leave->status == 1 ? 'Approved' : 'Pending' }}
+                            {{ permission($leave->status)}}
                         </span>
                     </td>
                     <td>
@@ -39,7 +39,7 @@
                                         <p>
                                             <span class="label label-success" style="padding: 4px 6px;">Holiday Type: {{ config("leave.type." . $leave->type_id) }}</span>
                                             <br><br>
-                                            <span class="label label-primary" style="padding: 6px 6px;">Final Status: {{ $leave->status == 1 ? 'Approved' : 'Disapproved' }}</span>
+                                            <span class="label label-primary" style="padding: 6px 6px;">Final Status: {{ permission($leave->status)}}</span>
                                             <br><br>
                                             <strong>Leaves Reason:</strong><br>
                                             {{ $leave->reason }}

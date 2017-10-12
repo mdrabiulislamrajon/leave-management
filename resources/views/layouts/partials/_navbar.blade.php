@@ -15,7 +15,7 @@
                     <span class="label label-danger">৯</span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="header">৯ টি ছুটির নোটিফিকেশন জমা হয়েছে</li>
+                    <li class="header">9 Notifications</li>
                     <li>
                         <!-- inner menu: contains the actual data -->
                         <ul class="menu">
@@ -50,7 +50,7 @@
                             <li>
                                 <a href="{{ url('notifications') }}" class="text-center">
                                     <h3>
-                                        সকল ছুটির নোটিফিকেশন
+                                        All Leave Notifications
                                     </h3>
                                 </a>
                             </li>
@@ -84,7 +84,7 @@
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();"
                             >
-                                সাইন আউট
+                                Sign Out
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}

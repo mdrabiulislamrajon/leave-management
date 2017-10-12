@@ -11,39 +11,47 @@
                         <br><br>
                         <span class="label label-success" style="padding: 4px 6px;">ছুটির প্রকৃতি: {{ config("leave.type." . $leave->type_id) }}</span>
                         <br><br>
-                        <span class="label label-primary" style="padding: 6px 6px;">চূড়ান্ত অবস্থা: {{ ! $leave->status ? 'অননুমোদিত' : 'অনুমোদিত' }}</span>
+                        <span class="label label-primary" style="padding: 6px 6px;">Final Status: {{ permission($leave->status) }}
                         <br><br>
-                        <strong>ছুটির আবেদনের কারণ:</strong><br>
+                        <strong>leave reason:</strong>
                         {{ $leave->reason }}
                     </p>
                     <br><br>
                     <table class="table table-condensed table-bordered table-striped" style="font-size:14px;">
                         <thead>
                             <tr>
-                                <th>শুরুর তারিখ</th>
-                                <th>শেষের তারিখ</th>
-                                <th>ছুটির সময়কাল</th>
+                                <th>Start date</th>
+                                <th>End Date</th>
+                                <th>Leave Duration</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>{{ entobn($leave->start_date->format('M d, Y')) }}</td>
                                 <td>{{ entobn($leave->end_date->format('M d, Y')) }}</td>
-                                <td>{{ entobn($leave->no_of_days) }} দিন</td>
+                                <td>{{ entobn($leave->no_of_days) }} Day</td>
                             </tr>
                         </tbody>
                     </table>
                     <table class="table table-condensed table-bordered table-striped" style="font-size:14px;">
                         <thead>
                             <tr>
-                                <th>কর্তৃপক্ষের মতামত/মন্তব্য:</th>
+                                <th>Authority's comments:</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($leave->approvals->where('is_read', true) as $approval)
                             <tr>
                                 <td>
-                                    <span class="logTime label label-default" title="Sunday, July 16, 2017 at 2:25pm">{{ $approval->updated_at->format('d M, h:i A') }}</span>&nbsp;&nbsp;<b> {{ $approval->notes }} -&gt; {{ $approval->approved == 1 ? 'approved' : 'Pending' }}</b><br> (by: {{ \App\Role::find($approval->role_id)->text }})
+                                    <span class="logTime label label-default" title="Sunday, July 16, 2017 at 2:25pm">{{ $approval->updated_at->format('d M, h:i A') }}</span>&nbsp;&nbsp;<b> {{ $approval->notes }} -&gt;
+                                    @if(($approval->status) == 1)
+                                     Approved
+                                     @elseif(($approval->status) == 0)
+                                     Pending
+                                     @elseif(($approval->status) == 2)
+                                     Disapproved
+                                     @endif
+                                     </b><br> (by: {{ \App\Role::find($approval->role_id)->text }})
                                 </td>
                             </tr>
                             @endforeach

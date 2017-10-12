@@ -21,7 +21,7 @@
                     <td><?php echo e(config("leave.type." . $leave->type_id)); ?></td>
                     <td>
                         <span class="label label-<?php echo e($leave->status == 1 ? 'success' : 'warning'); ?>">
-                            <?php echo e($leave->status == 1 ? 'Approved' : 'Pending'); ?>
+                            <?php echo e(permission($leave->status)); ?>
 
                         </span>
                     </td>
@@ -40,7 +40,7 @@
                                         <p>
                                             <span class="label label-success" style="padding: 4px 6px;">Holiday Type: <?php echo e(config("leave.type." . $leave->type_id)); ?></span>
                                             <br><br>
-                                            <span class="label label-primary" style="padding: 6px 6px;">Final Status: <?php echo e($leave->status == 1 ? 'Approved' : 'Disapproved'); ?></span>
+                                            <span class="label label-primary" style="padding: 6px 6px;">Final Status: <?php echo e(permission($leave->status)); ?></span>
                                             <br><br>
                                             <strong>Leaves Reason:</strong><br>
                                             <?php echo e($leave->reason); ?>

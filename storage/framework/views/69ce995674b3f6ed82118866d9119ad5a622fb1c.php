@@ -1,5 +1,5 @@
 <?php echo $__env->make('layouts.common.title', [
-	'title' => "আপনার তথ্য পরিবর্তন করুন", 
+	'title' => "Change your Information", 
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 

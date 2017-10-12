@@ -11,7 +11,7 @@
 			<div class="col-md-12 text-center">
 				<h2 id="name">{{ $profileUser->name }}</h2>
 				<p>
-					যোগদানের তারিখ : {{ $profileUser->join_date ? entobn($profileUser->join_date->format('M d, Y')) : 'দেয়া হয় নি' }}
+					Joining Date : {{ $profileUser->join_date ? entobn($profileUser->join_date->format('M d, Y')) : 'Not given' }}
 				</p>
 				<p>
 					<i class="fa fa-phone"></i> <span id="mobile_phone">{{ $profileUser->mobile }}</span>&nbsp;&nbsp;

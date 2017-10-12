@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @include('layouts.common.title', [
-	'title' => 'নতুন ছুটি যুক্ত করুন', 
+	'title' => 'Add New Leave', 
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ])
 

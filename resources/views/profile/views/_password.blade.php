@@ -4,7 +4,7 @@
     <div class="row clearfix">
         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="password">নতুন পাসওয়ার্ড<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="password">New Password<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input type="password" name="password" class="form-control" id="password" >
@@ -18,7 +18,7 @@
     <div class="row clearfix" style="margin-top: 25px;">
         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="password_confirmation">কন্ফার্ম পাসওয়ার্ড<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="password_confirmation">Confirm Password<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input type="password" name="password_confirmation" class="form-control" id="password">
@@ -32,10 +32,10 @@
     <div class="row" style="margin-top: 25px;">
         <div class="col-md-8 text-right">
             <button class="btn btn-default" style="margin-right:8px;" type="reset">
-                <i class="fa fa-times-circle-o"></i> বাতিল করুন
+                <i class="fa fa-times-circle-o"></i> Delete
             </button>
             <button type="submit" class="btn btn-primary">
-                <i class="fa fa-save"></i> পরিবর্তন করুন
+                <i class="fa fa-save"></i> Change
             </button>
         </div>
     </div>

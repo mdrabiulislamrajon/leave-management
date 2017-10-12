@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @include('layouts.common.title', [
-	'title' => "বাৎসরিক সকল ছুটির হিসাব",
+	'title' => "Yearly All Leave List",
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ])
 
@@ -13,7 +13,7 @@
 		    	<a id="tabEmployee" href="{{ url('employee/' . $profileUser->id . '/leaves') }}">Leave Application List</a>
 		    </li>
 		    <li class="{{ Request::segment(3) == 'reports' ? 'active' : '' }}">
-		    	<a id="tabPageEmployee" href="{{ url('employee/' . $profileUser->id . '/reports') }}">ছুটির রিপোর্ট</a>
+		    	<a id="tabPageEmployee" href="{{ url('employee/' . $profileUser->id . '/reports') }}">Leave Roport</a>
 		    </li>
 		</ul>
 		<div class="tab-content rendering-content">
@@ -22,7 +22,7 @@
 				<div class="well" style="padding: 8px;">
 					<div class="row">
 						<div class="col-md-4">
-							<a href="{{ url('employee/' . $profileUser->id . '/leaves')}}" class="btn btn-primary">ছুটির আবেদনপত্রসমূহ</a>
+							<a href="{{ url('employee/' . $profileUser->id . '/leaves')}}" class="btn btn-primary">Leave Application List</a>
 						</div>
 						<div class="col-md-8 text-right">
 							<form class="form form-inline" method="GET">
@@ -53,7 +53,7 @@
 
 @section('script')
 	@include('layouts.common.dt-export', [
-		'heading' => 'বাৎসরিক সকল ছুটির হিসাব',
+		'heading' => 'Yearly All Leave List',
 		'columns' => '0, 1, 2, 3, 4, 5, 6'
 	])
 	<script type="text/javascript">

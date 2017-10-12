@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @include('layouts.common.title', [
-	'title' => "আপনার লগইন পাসওয়ার্ড পরিবর্তন করুন", 
+	'title' => "Change your login information", 
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ])
 

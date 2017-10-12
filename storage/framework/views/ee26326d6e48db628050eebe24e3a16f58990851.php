@@ -11,7 +11,7 @@
 			<div class="col-md-12 text-center">
 				<h2 id="name"><?php echo e($profileUser->name); ?></h2>
 				<p>
-					যোগদানের তারিখ : <?php echo e($profileUser->join_date ? entobn($profileUser->join_date->format('M d, Y')) : 'দেয়া হয় নি'); ?>
+					Joining Date : <?php echo e($profileUser->join_date ? entobn($profileUser->join_date->format('M d, Y')) : 'Not given'); ?>
 
 				</p>
 				<p>

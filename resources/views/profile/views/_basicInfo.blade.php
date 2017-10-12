@@ -25,17 +25,17 @@
 				<a class="btn btn-small btn-success" style="margin-right:10px;"
 					href="{{ url('profile/edit') }}" 
 				>
-					<i class="fa fa-edit"></i> তথ্য পরিবর্তন
+					<i class="fa fa-edit"></i> Change Information
 				</a>
 				<button class="btn btn-small btn-primary" type="button" style="margin-right:10px;"
 				>
-					<i class="fa fa-upload"></i> ছবি আপলোড
+					<i class="fa fa-upload"></i> Picture Upload
 				</button>
 				<button id="employeeDeleteProfileImage" onclick="modJs.deleteProfileImage(1);return false;" class="btn btn-small btn-warning" type="button" style="margin-right:10px;">
-					<i class="fa fa-upload"></i> সাক্ষর আপলোড
+					<i class="fa fa-upload"></i> Signature Upload 
 				</button>
 				<button id="employeeUpdatePassword" onclick="modJs.changePassword();return false;" class="btn btn-small btn-danger" type="button" style="margin-right:10px;">
-					<i class="fa fa-lock"></i> পাসওয়ার্ড পরিবর্তন
+					<i class="fa fa-lock"></i> Change Password
 				</button>
 			</div>
 	    </div>	
@@ -50,37 +50,37 @@
 </div>
 <div class="row" style="border-top: 1px; margin-top: 20px;">
 	<div class="col-xs-6 col-md-1" style="font-size:16px;">
-		<label class="control-label col-xs-12" style="font-size:13px;font-size:13px;">নম্বর</label>
+		<label class="control-label col-xs-12" style="font-size:13px;font-size:13px;">Number</label>
 		<label class="control-label col-xs-12 iceLabel" style="font-size:13px;font-weight: bold;" id="employee_id">
 			EMP{{ $profile->id }}
 		</label>
 	</div>
 	<div class="col-xs-6 col-md-3" style="font-size:16px;">
-		<label class="control-label col-xs-12" style="font-size:13px;">পিতা/স্বামীর নাম</label>
+		<label class="control-label col-xs-12" style="font-size:13px;">Father/Husband's name</label>
 		<label class="control-label col-xs-12 iceLabel" style="font-size:13px;font-weight: bold;" id="nic_num">
 			{{ $profile->fa_hu_name }}
 		</label>
 	</div>
 	<div class="col-xs-6 col-md-3" style="font-size:16px;">
-		<label class="control-label col-xs-12" style="font-size:13px;">মাতার নাম</label>
+		<label class="control-label col-xs-12" style="font-size:13px;">Mother's name</label>
 		<label class="control-label col-xs-12 iceLabel" style="font-size:13px;font-weight: bold;" id="nic_num">
 			{{ $profile->mother_name }}
 		</label>
 	</div>
 	<div class="col-xs-6 col-md-2" style="font-size:16px;">
-		<label class="control-label col-xs-12" style="font-size:13px;">যোগদান</label>
+		<label class="control-label col-xs-12" style="font-size:13px;">Join</label>
 		<label class="control-label col-xs-12 iceLabel" style="font-size:13px;font-weight: bold;" id="ssn_num">
-			{{ $profile->join_date ? $profile->join_date->format('M d, Y') : 'দেয়া নেই' }}
+			{{ $profile->join_date ? $profile->join_date->format('M d, Y') : 'Not Given' }}
 		</label>
 	</div>
 	<div class="col-xs-6 col-md-2" style="font-size:16px;">
-		<label class="control-label col-xs-12" style="font-size:13px;">স্ট্যাটাস</label>
+		<label class="control-label col-xs-12" style="font-size:13px;">Status</label>
 		<label class="control-label col-xs-12 iceLabel" style="font-size:13px;font-weight: bold;" id="ssn_num">
-			{{ $profile->active ? 'একটিভ আছে ' : 'একটিভ নেই' }}
+			{{ $profile->active ? 'Active' : 'Not Active' }}
 		</label>
 	</div>
 	<div class="col-xs-6 col-md-1" style="font-size:16px;">
-		<label class="control-label col-xs-12" style="font-size:13px;">জেন্ডার</label>
+		<label class="control-label col-xs-12" style="font-size:13px;">Gender</label>
 		<label class="control-label col-xs-12 iceLabel" style="font-size:13px;font-weight: bold;" id="ssn_num">
 			{{ ucfirst($profile->gender) }}
 		</label>

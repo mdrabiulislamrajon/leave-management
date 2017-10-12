@@ -1,5 +1,5 @@
 <?php echo $__env->make('layouts.common.title', [
-	'title' => "বাৎসরিক সকল ছুটির হিসাব",
+	'title' => "Annual Holiday Statistics",
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
@@ -17,7 +17,7 @@
 								<div class="form-group">
 									<label class="sr-only" for="">label</label>
 									<select name="year" id="" class="form-control">
-										<option value="">বছর সিলেক্ট করুন</option>
+										<option value="">Select Year</option>
 										<?php for($i = 2017; $i < 2050; $i++): ?>
 										<option value="<?php echo e($i); ?>" <?php echo e((Request::input('year') ? : date('Y')) == $i ? 'selected' : ''); ?>>
 											<?php echo e(entobn($i)); ?>
@@ -27,7 +27,7 @@
 									</select>
 								</div>
 								<button type="submit" class="btn btn-primary">
-									<i class="fa fa-search"></i> সার্চ করুন
+									<i class="fa fa-search"></i> Search
 								</button>
 							</form>
 						</div>
@@ -42,7 +42,7 @@
 
 <?php $__env->startSection('script'); ?>
 	<?php echo $__env->make('layouts.common.dt-export', [
-		'heading' => 'বাৎসরিক সকল ছুটির হিসাব',
+		'heading' => 'Annual Holiday Statistics',
 		'columns' => '0, 1, 2, 3, 4, 5, 6'
 	], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php $__env->stopSection(); ?>

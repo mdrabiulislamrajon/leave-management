@@ -21,7 +21,7 @@
                     <td><?php echo e(config("leave.type." . $leave->type_id)); ?></td>
                     <td>
                         <span class="label label-<?php echo e($leave->status == 1 ? 'success' : 'warning'); ?>">
-                            <?php echo e($leave->status == 1 ? 'Approved' : 'Pending'); ?>
+                            <?php echo e(permission($leave->status)); ?>
 
                         </span>
                     </td>

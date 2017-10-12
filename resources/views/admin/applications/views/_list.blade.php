@@ -21,7 +21,7 @@
                     <td>{{ config("leave.type." . $leave->type_id) }}</td>
                     <td>
                         <span class="label label-{{ $leave->status == 1 ? 'success' : 'warning' }}">
-                            {{ $leave->status == 1 ? 'Approved' : 'Pending' }}
+                            {{ permission($leave->status) }}
                         </span>
                     </td>
                     <td>

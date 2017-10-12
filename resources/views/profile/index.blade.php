@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @include('layouts.common.title', [
-	'title' => "ব্যবহারকারীর প্রোফাইলের সকল তথ্য", 
+	'title' => "User Profile Information", 
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ])
 

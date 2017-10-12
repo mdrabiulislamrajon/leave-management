@@ -45,3 +45,8 @@ function bntoen($string)
 
     return str_replace($bangDATE, $engDATE, $string);
 }
+
+function permission($status){
+
+    return $status == 1 ? 'approved' : ($status == 0 ? 'Pending' : 'Cancelled');
+}

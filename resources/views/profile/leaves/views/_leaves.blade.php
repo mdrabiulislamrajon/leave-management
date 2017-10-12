@@ -2,13 +2,13 @@
     <table class="table table-striped table-bordered datatable">
         <thead>
             <tr>
-            	<th>ছুটির প্রকৃতি</th>
+            	<th>Leave Type</th>
                 <th>আবেদনপত্র</th>
-                <th>পেন্ডিং আবেদন</th>
-                <th>অনুমোদিত আবেদন</th>
-                <th>আবেদনকৃত ছুটি</th>
-                <th>অনুমোদিত ছুটি</th>
-                <th>বকেয়া ছুটি</th>
+                <th>Pending Leave</th>
+                <th>Cancelled Leave</th>
+                <th>Applicable Leave</th>
+                <th>Approved Leave</th>
+                <th>Left Leave</th>
             </tr>
         </thead>
         <tbody>

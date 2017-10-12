@@ -9,24 +9,24 @@
                     <p>
                         <span class="label label-info" style="padding: 4px 6px;"><?php echo e($leave->reason); ?></span>
                         <br><br>
-                        <span class="label label-success" style="padding: 4px 6px;">ছুটির প্রকৃতি: <?php echo e(config("leave.type." . $leave->type_id)); ?></span>
+                        <span class="label label-success" style="padding: 4px 6px;">Leave Type: <?php echo e(config("leave.type." . $leave->type_id)); ?></span>
                         <br><br>
-                        <span class="label label-primary" style="padding: 6px 6px;">চূড়ান্ত অবস্থা: <?php echo e(! $leave->status ? 'অননুমোদিত' : 'অনুমোদিত'); ?></span>
+                        <span class="label label-primary" style="padding: 6px 6px;">Final Status: <?php echo e(! $leave->status ? 'Approved' : 'Disapproved'); ?></span>
                     </p>
                     <br><br>
                     <table class="table table-condensed table-bordered table-striped" style="font-size:14px;">
                         <thead>
                             <tr>
-                                <th>শুরুর তারিখ</th>
-                                <th>শেষের তারিখ</th>
-                                <th>ছুটির সময়কাল</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Leave Duration</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><?php echo e(entobn($leave->start_date->format('M d, Y'))); ?></td>
                                 <td><?php echo e(entobn($leave->end_date->format('M d, Y'))); ?></td>
-                                <td><?php echo e(entobn($leave->no_of_days)); ?> দিন</td>
+                                <td><?php echo e(entobn($leave->no_of_days)); ?> Day</td>
                             </tr>
                         </tbody>
                     </table>
@@ -35,19 +35,19 @@
                         <?php echo e(csrf_field()); ?>
 
                         <legend class="text-center" style="font-size: 1.1em;">
-                            ছুটির আবেদনের প্রেক্ষিতে আপনার মন্তব্য/মতামত
+                            Your comments in the context of the Leave application
                         </legend>
                         <div class="form-group" style="width: 100%; padding-left: 20px; margin-bottom: 15px;">
                             <select name="status" class="form-control" style="width: 100%;">
-                                <option value="1">অনুমোদন করা হলো</option>
-                                <option value="2">বাতিল করা হলো</option>
+                                <option value="1">Approved</option>
+                                <option value="2">Disapproved</option>
                             </select>
                         </div>
                         <div class="form-group" style="width: 100%; padding-left: 20px; margin-bottom: 15px;">
-                            <textarea name="note" id="note" rows="3" style="width: 100%;" class="form-control" placeholder="আপনার মন্তব্য/মতামত"></textarea>
+                            <textarea name="note" id="note" rows="3" style="width: 100%;" class="form-control" placeholder="Your Ppinion"></textarea>
                         </div>
                         <div class="form-group" style="width: 100%; padding-left: 20px; margin-top: 10px;">
-                            <button type="submit" class="btn btn-primary">সেভ করুন</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
                         </div>
                     </form>
                 </div>
