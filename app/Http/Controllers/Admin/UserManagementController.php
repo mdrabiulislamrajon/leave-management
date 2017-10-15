@@ -59,8 +59,7 @@ class UserManagementController extends Controller
         $user_management->load('role');
 
         return view('admin.employee.show', [
-            'profileUser' => $user_management
-        ]);
+L        ]);
     }
 
     /**

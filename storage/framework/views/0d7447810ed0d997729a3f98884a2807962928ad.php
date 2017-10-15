@@ -1,5 +1,5 @@
 <?php echo $__env->make('layouts.common.title', [
-	'title' => 'ব্যবহারকারীর ছুটি অনুমোদনকারীর তালিকা',
+	'title' => 'User Application Approval List',
 	'link' => 'User Management &nbsp;>&nbsp; Edit User'
 ], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
@@ -8,10 +8,10 @@
 	<div class="col-xs-12">
 		<ul class="nav nav-tabs" id="modTab" style="margin-bottom:0px;margin-left:5px;border-bottom: none;">
 	        <li>
-	        	<a id="tabEmployee" href="<?php echo e(url('user-management')); ?>">ব্যবহারকারীর তালিকা</a>
+	        	<a id="tabEmployee" href="<?php echo e(url('user-management')); ?>">User List</a>
 	        </li>
 	        <li>
-	        	<a id="tabEmployee" href="<?php echo e(url('user-management/create')); ?>">নতুন ব্যবহারকারী</a>
+	        	<a id="tabEmployee" href="<?php echo e(url('user-management/create')); ?>">New User</a>
 	        </li>
 		</ul>
 		<div class="tab-content rendering-content">
@@ -47,7 +47,7 @@
 				</form>
 				<?php else: ?>
 					<div class="form-group text-center">
-						<a href="<?php echo e(url('user-management')); ?>" class="btn btn-default ">ইউজার ম্যানেজমেন্ট পৃষ্ঠা</a>
+						<a href="<?php echo e(url('user-management')); ?>" class="btn btn-default ">User Management Page</a>
 					</div>
 				<?php endif; ?>
 			</div>

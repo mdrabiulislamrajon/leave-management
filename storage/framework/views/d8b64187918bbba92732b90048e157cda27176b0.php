@@ -6,7 +6,7 @@
     <div class="row clearfix">
         <div class="form-group<?php echo e($errors->has('name') ? ' has-error' : ''); ?>">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="name">ব্যবহারকারীর নাম<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="name">User Name<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input type="text" name="name" class="form-control" id="name" value="<?php echo e(old('name') ? : $profile->name); ?>">
@@ -19,7 +19,7 @@
     <div class="row clearfix" style="margin-top: 20px;">
         <div class="form-group<?php echo e($errors->has('fa_hu_name') ? ' has-error' : ''); ?>">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="fa_hu_name">পিতা/স্বামীর নাম<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="fa_hu_name">Father/Husband Name<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input name="fa_hu_name" type="text" class="form-control" id="fa_hu_name" value="<?php echo e(old('fa_hu_name') ? : $profile->fa_hu_name); ?>">
@@ -32,7 +32,7 @@
     <div class="row clearfix" style="margin-top: 20px;">
         <div class="form-group<?php echo e($errors->has('mother_name') ? ' has-error' : ''); ?>">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="mother_name">মাতার নাম<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="mother_name">Mother's Name<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input name="mother_name" type="text" class="form-control" id="mother_name" value="<?php echo e(old('mother_name') ? : $profile->mother_name); ?>">
@@ -45,7 +45,7 @@
     <div class="row clearfix" style="margin-top: 20px;">
         <div class="form-group<?php echo e($errors->has('mobile') ? ' has-error' : ''); ?>">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="mobile">মোবাইল নাম্বার<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="mobile">Mobile Number<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input name="mobile" type="text" class="form-control" id="mobile" value="<?php echo e(old('mobile') ? : $profile->mobile); ?>">
@@ -58,10 +58,10 @@
     <div class="row" style="margin-top: 25px;">
         <div class="col-md-8 text-right">
             <button class="btn btn-default" style="margin-right:8px;" type="reset">
-                <i class="fa fa-times-circle-o"></i> বাতিল করুন
+                <i class="fa fa-times-circle-o"></i> Delete
             </button>
             <button type="submit" class="btn btn-primary">
-                <i class="fa fa-save"></i> পরিবর্তন করুন
+                <i class="fa fa-save"></i> Change
             </button>
         </div>
     </div>

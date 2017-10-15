@@ -20,7 +20,7 @@
                     <td><?php echo e(entobn($leave->no_of_days)); ?> Days</td>
                     <td><?php echo e(config("leave.type." . $leave->type_id)); ?></td>
                     <td>
-                        <span class="label label-<?php echo e($leave->status == 1 ? 'success' : 'warning'); ?>">
+                        <span class="label label-<?php echo e($leave->status == 1 ? 'success' : ($leave->status == 0 ? 'warning':'info')); ?>">
                             <?php echo e(permission($leave->status)); ?>
 
                         </span>

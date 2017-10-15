@@ -25,9 +25,9 @@
                     <td><?php echo e($user->div_br_off); ?></td>
                     <td>
                     	<?php if($user->active): ?>
-                    	<span class="label label-success">Approved</span>
+                    	<span class="label label-success">Active</span>
                     	<?php else: ?>
-                    	<span class="label label-danger">Pending</span>
+                    	<span class="label label-danger">Inactive</span>
                     	<?php endif; ?>
                     </td>
                     <td>

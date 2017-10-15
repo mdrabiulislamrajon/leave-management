@@ -20,7 +20,7 @@
                     <td>{{ entobn($leave->no_of_days) }} Days</td>
                     <td>{{ config("leave.type." . $leave->type_id) }}</td>
                     <td>
-                        <span class="label label-{{ $leave->status == 1 ? 'success' : 'warning' }}">
+                        <span class="label label-{{ $leave->status == 1 ? 'success' : ($leave->status == 0 ? 'warning':'info') }}">
                             {{ permission($leave->status)}}
                         </span>
                     </td>

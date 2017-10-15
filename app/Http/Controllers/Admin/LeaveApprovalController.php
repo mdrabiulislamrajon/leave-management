@@ -17,7 +17,7 @@ class LeaveApprovalController extends Controller
         $update->is_read = true;
         $update->save();
 
-        if ($request->user()->role_id == 1) {
+        if ( $request->user()->role_id == $application->topAuthorizer ) {
             $application->status = $request->input('status') == 1 ? true : false;
             $application->save();
         } else {

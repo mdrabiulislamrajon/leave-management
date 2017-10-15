@@ -25,9 +25,9 @@
                     <td>{{$user->div_br_off}}</td>
                     <td>
                     	@if($user->active)
-                    	<span class="label label-success">Approved</span>
+                    	<span class="label label-success">Active</span>
                     	@else
-                    	<span class="label label-danger">Pending</span>
+                    	<span class="label label-danger">Inactive</span>
                     	@endif
                     </td>
                     <td>

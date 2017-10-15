@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Application extends Model
 {
+    protected $appends = [
+        'topAuthorizer'
+    ];
+
     protected $fillable = [
         'user_id', 'type_id', 'reason', 'no_of_days', 'start_date',
         'end_date', 'vacation_address', 'status'
@@ -65,5 +69,12 @@ class Application extends Model
     {
         return $this->approvals()->where('role_id', auth()->user()->role_id)->where('is_visible', true)
             ->where('approved', false)->count() ? true : false;
+    }
+    
+    public function getTopAuthorizerAttribute()
+    {
+        $this->load('user.role');
+
+        return $this->user->role->authorizers()->first()->id;
     }
 }

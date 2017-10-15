@@ -1,5 +1,5 @@
 <?php 
-	$title = Request::is('settings/leave') ? 'বাৎসরিক ছুটি ব্যাবস্থাপনা' : 'বাৎসরিক নতুন ছুটি';
+	$title = Request::is('settings/leave') ? 'Yearly Leave Management' : 'Yearly New Leave';
  ?>
 <?php echo $__env->make('layouts.common.title', [
 	'title' => $title, 
@@ -18,7 +18,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<a href="<?php echo e(url('settings/leave/create')); ?>" class="btn btn-primary btn-sm">
-								<i class="fa fa-plus"></i>&nbsp;নতুন ছুটি যোগ করুন
+								<i class="fa fa-plus"></i>&nbsp;Add new leave
 							</a>
 						</div>
 						<div class="col-md-6 text-right">
@@ -26,7 +26,7 @@
 								<div class="form-group">
 									<label class="sr-only" for="">label</label>
 									<select name="year" id="" class="form-control">
-										<option value="">বছর সিলেক্ট করুন</option>
+										<option value="">Select Year</option>
 										<?php for($i = 2017; $i < 2050; $i++): ?>
 										<option value="<?php echo e($i); ?>" <?php echo e((Request::input('year') ? : date('Y')) == $i ? 'selected' : ''); ?>>
 											<?php echo e(entobn($i)); ?>
@@ -36,7 +36,7 @@
 									</select>
 								</div>
 								<button type="submit" class="btn btn-primary">
-									<i class="fa fa-search"></i> সার্চ করুন
+									<i class="fa fa-search"></i> Search 
 								</button>
 							</form>
 						</div>
@@ -45,7 +45,7 @@
 				<?php if($leaves->count()): ?>
 					<?php echo $__env->make('settings.leave.views._table', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 	            <?php else: ?>
-					<h3 class="text-center">ছুটি ব্যাবস্থাপনার কোনো তথ্য খুঁজে পাওয়া যায় নি</h3>
+					<h3 class="text-center">No information was found on Leave management</h3>
 	            <?php endif; ?>
 			</div>   		
 		</div>
