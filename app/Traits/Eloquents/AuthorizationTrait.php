@@ -31,5 +31,7 @@ trait AuthorizationTrait
         return $this->children->count() ? true : false;
     }
 
+  
+
 
 }

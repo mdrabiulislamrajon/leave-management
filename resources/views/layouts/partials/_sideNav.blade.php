@@ -4,7 +4,7 @@
             <i class="fa fa-dashboard"></i> <span>Home Page</span>
         </a>
     </li>
-    @if( ! in_array(auth()->user()->role->slug, ['dg', 'secretary']) )
+    @if( ! in_array(auth()->user()->role->slug, ['dg', 'chairman']) )
     <li class="{{ Request::segment(1) == 'apply' ? 'active' : '' }}">
         <a href="{{ url('apply') }}">
             <i class="fa fa-envelope-o"></i> <span>Apply For Leave</span>
@@ -69,4 +69,24 @@
         </ul>
     </li>
     @endif
+
+    @if($user->type === 'md')
+<li class="treeview{{ Request::segment(1) == 'user-management' ? ' active' : '' }}">
+        <a href="#">
+            <span class="glyphicon glyphicon-user"></span>
+            <span>All Application List</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li class="{{ Request::is('/md') ? 'active' : '' }}">
+                <a href="{{url('/md')}}">
+                    <i class="fa fa-angle-double-right"></i>All Application
+                </a>
+            </li>
+         </ul>
+    </li>
+
+    @endif
+ 
+
 </ul>
