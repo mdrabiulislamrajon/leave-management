@@ -1,6 +1,6 @@
  @extends('layouts.master')
  @include('layouts.common.title', [
-	'title' => 'ইউজার ম্যানেজমেন্ট: ' . $user->name, 
+	'title' => 'User Managenent: ' . $user->name, 
 	'link' => 'User Management &nbsp;>&nbsp; User View'
   ])
  @section('content')
@@ -8,10 +8,10 @@
     <div class="col-xs-12">
         <ul class="nav nav-tabs" id="modTab" style="margin-bottom:0px;margin-left:5px;border-bottom: none;">
             <li>
-                <a id="tabEmployee" href="{{ url('user-management') }}">ব্যবহারকারীর তালিকা</a>
+                <a id="tabEmployee" href="{{ url('user-management') }}">User List</a>
             </li>
             <li>
-                <a id="tabEmployee" href="{{ url('user-management/create') }}">নতুন ব্যবহারকারী</a>
+                <a id="tabEmployee" href="{{ url('user-management/create') }}">New User</a>
             </li>
         </ul> 
         <div class="tab-content rendering-content">

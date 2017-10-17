@@ -74,12 +74,12 @@
                             <?php echo e(Auth::user()->name); ?>
 
                             <small><?php echo e(Auth::user()->designation); ?></small>
-                            <small>যোগদান: <?php echo e(entobn(Auth::user()->join_date->format('M, Y'))); ?></small>
+                            <small>Join Date: <?php echo e(entobn(Auth::user()->join_date->format('M, Y'))); ?></small>
                         </p>
                     </li>
                     <li class="user-footer">
                         <div class="pull-left">
-                            <a href="<?php echo e(url('profile')); ?>" class="btn btn-default btn-flat">প্রোফাইল</a>
+                            <a href="<?php echo e(url('profile')); ?>" class="btn btn-default btn-flat">Profile</a>
                         </div>
                         <div class="pull-right">
                             <a href="<?php echo e(route('logout')); ?>"

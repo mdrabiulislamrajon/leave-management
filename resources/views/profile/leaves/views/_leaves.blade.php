@@ -3,7 +3,7 @@
         <thead>
             <tr>
             	<th>Leave Type</th>
-                <th>আবেদনপত্র</th>
+                <th>Application Form</th>
                 <th>Pending Leave</th>
                 <th>Cancelled Leave</th>
                 <th>Applicable Leave</th>

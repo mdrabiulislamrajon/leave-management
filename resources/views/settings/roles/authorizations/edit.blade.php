@@ -2,7 +2,7 @@
 
 @extends('layouts.master')
 
-@include('layouts.common.title', ['title' => 'ছুটি অনুমোদনকারী কর্মকর্তাবৃন্দের তালিকা', 'link' => 'Test Link'])
+@include('layouts.common.title', ['title' => 'List of Leave Approval  officers', 'link' => 'Test Link'])
 
 @section('content')
 	<div class="row">
@@ -14,7 +14,7 @@
 						{{ csrf_field() }}
 						{{ method_field('PATCH') }}
 
-						<legend>উর্ধতন কর্মকর্তাগণের তালিকা থেকে ছুটি অনুমোদনকারী কর্মকর্তাবৃন্দের পদবি আপডেট করুন |</legend>
+						<legend>Select the officers of the leave approval officers from the list of senior officials</legend>
 						<div class="row">
 						@foreach($parents as $parent)
 							<div class="col-md-3">
@@ -23,7 +23,7 @@
 						@endforeach
 						</div>
 						<hr>
-						<button type="submit" class="btn btn-primary">সেভ করুন</button>
+						<button type="submit" class="btn btn-primary">Save</button>
 					</form>
 				</div>
 			</div>

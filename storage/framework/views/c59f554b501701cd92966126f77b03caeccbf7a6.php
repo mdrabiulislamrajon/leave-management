@@ -1,22 +1,20 @@
-@extends('layouts.master')
+<?php echo $__env->make('layouts.common.title', ['title' => 'ছুটির দরখাস্ত সংক্রান্ত নোটিফিকেশনসমূহ', 'link' => 'Test Link'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-@include('layouts.common.title', ['title' => 'Leave Application Notification', 'link' => 'Test Link'])
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="tab-content rendering-content">
 	<div class="tab-pane active" id="tabLeaves">
 		<div class="row">
 	        <div class="col-md-3 col-sm-4">
 	            <div class="box-header">
 	                <i class="fa fa-inbox"></i>
-	                <h3 class="box-title">Notification Box</h3>
+	                <h3 class="box-title">নোটিফিকেশন বক্স</h3>
 	            </div>
 	            <!-- compose message btn -->
 	            <div style="margin-top: 15px;">
 	                <ul class="nav nav-pills nav-stacked">
-	                    <li class="active"><a href="#"><i class="fa fa-inbox"></i>  All notifications </a></li>
-	                    <li><a href="#"><i class="fa fa-pencil-square-o"></i> Read notifications </a></li>
-	                    <li><a href="#"><i class="fa fa-mail-forward"></i> Unread notifications </a></li>
+	                    <li class="active"><a href="#"><i class="fa fa-inbox"></i>  সকল নোটিফিকেশন </a></li>
+	                    <li><a href="#"><i class="fa fa-pencil-square-o"></i> পঠিত নোটিফিকেশন </a></li>
+	                    <li><a href="#"><i class="fa fa-mail-forward"></i> অপঠিত নোটিফিকেশন </a></li>
 	                </ul>
 	            </div>
 	        </div><!-- /.col (LEFT) -->
@@ -140,4 +138,5 @@
 	    </div>
 	</div>
 </div>
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -71,12 +71,12 @@
                         <p>
                             {{ Auth::user()->name }}
                             <small>{{ Auth::user()->designation }}</small>
-                            <small>যোগদান: {{ entobn(Auth::user()->join_date->format('M, Y')) }}</small>
+                            <small>Join Date: {{ entobn(Auth::user()->join_date->format('M, Y')) }}</small>
                         </p>
                     </li>
                     <li class="user-footer">
                         <div class="pull-left">
-                            <a href="{{ url('profile') }}" class="btn btn-default btn-flat">প্রোফাইল</a>
+                            <a href="{{ url('profile') }}" class="btn btn-default btn-flat">Profile</a>
                         </div>
                         <div class="pull-right">
                             <a href="{{ route('logout') }}"

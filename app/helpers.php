@@ -28,7 +28,7 @@ function entobn($string)
     বুধবার','বৃহস্পতিবার','শুক্রবার', 'ঘণ্টা', 'ঘণ্টা', 'মিনিট', 'মিনিট', 'সেকেন্ড', 'সেকেন্ড', 'দিন', 'দিন', 'মাস', 'মাস', 'বছর', 'বছর', 'সপ্তাহ', 'সপ্তাহ', ' পূর্বে', 'সকাল', 'সকাল', 'বিকাল', 'বিকাল'
     ];
 
-    return str_replace($engDATE, $bangDATE, $string);
+    return str_replace($bangDATE,$engDATE, $string);
 }
 
 function bntoen($string)
@@ -43,7 +43,7 @@ function bntoen($string)
     বুধবার','বৃহস্পতিবার','শুক্রবার'
     ];
 
-    return str_replace($bangDATE, $engDATE, $string);
+    return str_replace($engDATE,$bangDATE,$string);
 }
 
 function permission($status){

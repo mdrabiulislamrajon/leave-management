@@ -3,11 +3,11 @@
         <thead>
             <tr>
             	<th style="width: 80px;"></th>
-                <th>ব্যবহারকারীর নাম</th>
-                <th>মোবাইল নম্বর</th>
-                <th>ব্যবহারকারীর পদবী</th>
-                <th>অফিসের ঠিকানা</th>
-                <th>বর্তমান স্ট্যাটাস</th>
+                <th>User Name</th>
+                <th>Mobile Number</th>
+                <th>User Designation</th>
+                <th>Sddress</th>
+                <th>Current status</th>
                 <th style="width: 9%;"></th>
             </tr>
         </thead>

@@ -1,7 +1,7 @@
 @inject('roles', 'App\Http\Services\RolesService')
 
 @extends('layouts.master')
-@include('layouts.common.title', ['title' => 'পদমর্যাদার তথ্য পরিবর্তন করা হয়েছে |', 'link' => 'Test Link'])
+@include('layouts.common.title', ['title' => 'Designation information has been changed', 'link' => 'Test Link'])
 
 @section('content')
 	<div class="row">

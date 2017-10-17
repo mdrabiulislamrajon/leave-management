@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@include('layouts.common.title', ['title' => 'সকল পদমর্যাদার তালিকা
+@include('layouts.common.title', ['title' => 'All Designation List
 
 ', 'link' => 'Test Link'])
 
@@ -41,13 +41,13 @@
 				<div class="well" style="padding: 8px;">
 					<div class="row">
 						<div class="col-md-10">
-							<h4>পদমর্যাদার তালিকা</h4>
+							<h4>Designation List</h4>
 						</div>
 						<div class="col-md-2">
 							<a href="{{ route('roles.create') }}"
 								class="btn btn-primary btn-sm pull-right"
 							>
-								<i class="fa fa-plus"></i> নতুন  অনুমোদন
+								<i class="fa fa-plus"></i> New Approval
 							</a>
 						</div>
 					</div>

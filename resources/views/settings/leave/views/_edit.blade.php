@@ -4,7 +4,7 @@
     <div class="row clearfix">
         <div class="form-group{{ $errors->has('title')  ? ' has-error' : '' }}">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="name">ছুটির কারণ<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="name">Leave Reason<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input type="text" name="title"  class="form-control" id="title"  value="{{ old('title') ? : $leave->title }}">
@@ -17,7 +17,7 @@
     <div class="row clearfix" style="margin-top: 20px;">
         <div class="form-group{{ $errors->has('from_date') ? ' has-error' : '' }}">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="from_date">শুরুর তারিখ<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="from_date">Start Date<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input type="text" name="from_date" class="form-control datepicker" id="from_date" value="{{ old('from_date') ? : $leave->from_date->format('m/d/Y') }}">
@@ -30,7 +30,7 @@
     <div class="row clearfix" style="margin-top: 20px;">
         <div class="form-group{{ $errors->has('to_date') ? ' has-error' : '' }}">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="to_date">শেষের তারিখ<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="to_date">End Date<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input type="text" name="to_date" class="form-control datepicker" id="to_date" value="{{ old('to_date') ? : $leave->to_date->format('m/d/Y') }}">
@@ -43,11 +43,11 @@
     <div class="row clearfix" style="margin-top: 20px;">
         <div class="form-group{{ $errors->has('year') ? ' has-error' : '' }}">
             <div class="col-md-2 col-md-offset-1 text-right">
-                <label for="year">ছুটির বছর<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="year">Leave Year<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <select name="year" id="" class="form-control">
-                    <option value="">বছর সিলেক্ট করুন</option>
+                    <option value="">Select Year</option>
                     @for($i = date('Y'); $i < 2050; $i++)
                         <option value="{{ $i }}" {{ (old('year') ? : $leave->year) == $i ? 'selected' : '' }}>
                             {{ entobn($i) }}
@@ -64,10 +64,10 @@
     <div class="row" style="margin-top: 25px;">
         <div class="col-md-8 text-right">
             <button class="btn btn-default" style="margin-right:8px;" type="reset">
-                <i class="fa fa-times-circle-o"></i> বাতিল করুন
+                <i class="fa fa-times-circle-o"></i> Delete
             </button>
             <button type="submit" class="btn btn-primary">
-                <i class="fa fa-save"></i> পরিবর্তন করুন
+                <i class="fa fa-save"></i> Change
             </button>
         </div>
     </div>

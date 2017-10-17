@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @include('layouts.common.title', [
-	'title' => "ব্যবহারকারীর সকল ছুটির আবেদনপত্রের তালিকা",
+	'title' => "List of all user holiday applications",
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ])
 
@@ -10,7 +10,7 @@
 	<div class="col-xs-12">
 		<ul class="nav nav-tabs" id="modTab" style="margin-bottom:0px;margin-left:5px;border-bottom: none;">
 		    <li class="{{ Request::is('admin/leaves') ? 'active' : '' }}">
-		    	<a id="tabEmployee" href="{{ url('admin/leaves') }}">আবেদনপত্রের তালিকা</a>
+		    	<a id="tabEmployee" href="{{ url('admin/leaves') }}">List of applications</a>
 		    </li>
 		</ul>
 		<div class="tab-content rendering-content">
@@ -25,7 +25,7 @@
 								<div class="form-group">
 									<label class="sr-only" for="">label</label>
 									<select name="type" id="" class="form-control">
-										<option value="">ছুটির প্রকৃতি নির্বাচন</option>
+										<option value="">Select Leave Type</option>
 										@foreach(config('leave.type') as $key => $type)
 											<option value="{{ $key }}" {{ Request::input('type') == $key ? 'selected' : '' }}>
 												{{ $type }}
@@ -36,15 +36,15 @@
 								<div class="form-group">
 									<label class="sr-only" for="">label</label>
 									<select name="status" id="" class="form-control">
-										<option value="">ছুটির স্ট্যাটাস নির্বাচন</option>
-										<option value="2">অনুমোদিত ছুটিসমূহ</option>
-										<option value="1">পেন্ডিং ছুটিসমূহ</option>
+										<option value="">Leave Status</option>
+										<option value="2">Approved Leave List</option>
+										<option value="1">Pending Leave List</option>
 									</select>
 								</div>
 								<div class="form-group">
 									<label class="sr-only" for="">label</label>
 									<select name="year" id="" class="form-control">
-										<option value="">বছর সিলেক্ট করুন</option>
+										<option value="">Select Year</option>
 										@for($i = 2017; $i < 2050; $i++)
 										<option value="{{ $i }}" {{ (Request::input('year') ? : date('Y')) == $i ? 'selected' : '' }}>
 											{{ entobn($i) }}
@@ -53,7 +53,8 @@
 									</select>
 								</div>
 								<button type="submit" class="btn btn-primary">
-									<i class="fa fa-search"></i> সার্চ করুন
+									<i class="fa fa-search"></i> 
+									Search 
 								</button>
 							</form>
 						</div>
@@ -63,7 +64,7 @@
 				@if($leaves->count())
 					@include('admin.applications.views._list')
 	            @else
-					<h3 class="text-center">কোনো রেজাল্ট খুঁজে পাওয়া যায় নি</h3>
+					<h3 class="text-center">No results found</h3>
 	            @endif
 
 			</div>

@@ -2,7 +2,7 @@
 
 @extends('layouts.master')
 
-@include('layouts.common.title', ['title' => 'নতুন পদমর্যাদা তৈরী করুন', 'link' => 'Test Link'])
+@include('layouts.common.title', ['title' => 'Create new Designation', 'link' => 'Test Link'])
 
 @section('content')
 	<div class="row">

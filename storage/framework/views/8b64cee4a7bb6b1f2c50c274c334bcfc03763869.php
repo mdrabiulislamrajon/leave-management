@@ -3,13 +3,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h5 class="modal-title">ছুটির বিস্তারিত বিবরণ</h5>
+                    <h5 class="modal-title">Leave Description </h5>
                 </div>
                 <div class="modal-body">
                     <p>
                         <span class="label label-info" style="padding: 4px 6px;"><?php echo e($leave->user->name); ?></span>
                         <br><br>
-                        <span class="label label-success" style="padding: 4px 6px;">ছুটির প্রকৃতি: <?php echo e(config("leave.type." . $leave->type_id)); ?></span>
+                        <span class="label label-success" style="padding: 4px 6px;">Leave Type: <?php echo e(config("leave.type." . $leave->type_id)); ?></span>
                         <br><br>
                         <span class="label label-primary" style="padding: 6px 6px;">Final Status: <?php echo e(permission($leave->status)); ?>
 

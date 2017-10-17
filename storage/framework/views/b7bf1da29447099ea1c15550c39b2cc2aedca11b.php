@@ -1,5 +1,5 @@
 <?php echo $__env->make('layouts.common.title', [
-	'title' => "ব্যবহারকারীর সকল ছুটির আবেদনপত্রের তালিকা",
+	'title' => "List Of All User Leave Applications",
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
@@ -8,7 +8,7 @@
 	<div class="col-xs-12">
 		<ul class="nav nav-tabs" id="modTab" style="margin-bottom:0px;margin-left:5px;border-bottom: none;">
 		    <li class="<?php echo e(Request::is('admin/leaves') ? 'active' : ''); ?>">
-		    	<a id="tabEmployee" href="<?php echo e(url('admin/leaves')); ?>">আবেদনপত্রের তালিকা</a>
+		    	<a id="tabEmployee" href="<?php echo e(url('admin/leaves')); ?>">List Of Applications</a>
 		    </li>
 		</ul>
 		<div class="tab-content rendering-content">
@@ -23,7 +23,7 @@
 								<div class="form-group">
 									<label class="sr-only" for="">label</label>
 									<select name="type" id="" class="form-control">
-										<option value="">ছুটির প্রকৃতি নির্বাচন</option>
+										<option value="">Select Leave Type</option>
 										<?php $__currentLoopData = config('leave.type'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 											<option value="<?php echo e($key); ?>" <?php echo e(Request::input('type') == $key ? 'selected' : ''); ?>>
 												<?php echo e($type); ?>
@@ -35,15 +35,15 @@
 								<div class="form-group">
 									<label class="sr-only" for="">label</label>
 									<select name="status" id="" class="form-control">
-										<option value="">ছুটির স্ট্যাটাস নির্বাচন</option>
-										<option value="2">অনুমোদিত ছুটিসমূহ</option>
-										<option value="1">পেন্ডিং ছুটিসমূহ</option>
+										<option value="">Select Leave Status</option>
+										<option value="2">Approved Leave List</option>
+										<option value="1">Pending Leave List</option>
 									</select>
 								</div>
 								<div class="form-group">
 									<label class="sr-only" for="">label</label>
 									<select name="year" id="" class="form-control">
-										<option value="">বছর সিলেক্ট করুন</option>
+										<option value="">Select Year</option>
 										<?php for($i = 2017; $i < 2050; $i++): ?>
 										<option value="<?php echo e($i); ?>" <?php echo e((Request::input('year') ? : date('Y')) == $i ? 'selected' : ''); ?>>
 											<?php echo e(entobn($i)); ?>
@@ -63,7 +63,7 @@
 				<?php if($leaves->count()): ?>
 					<?php echo $__env->make('admin.applications.views._list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 	            <?php else: ?>
-					<h3 class="text-center">কোনো রেজাল্ট খুঁজে পাওয়া যায় নি</h3>
+					<h3 class="text-center">No Result Found</h3>
 	            <?php endif; ?>
 
 			</div>

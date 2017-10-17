@@ -2,10 +2,10 @@
 
 @extends('layouts.master')
 @php
-	$title = Request::is('user-management') ? 'সকল এডমিন ব্যবহারকারীর তালিকা' : 'নতুন ব্যবহারকারী যুক্ত করুন';
+	$title = Request::is('user-management') ? 'All admin users list: 'Add new user'';
 @endphp
 @include('layouts.common.title', [
-	'title' => "ইউজার ম্যানেজমেন্ট | " . $title,
+	'title' => "User Management " . $title,
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ])
 
@@ -14,10 +14,10 @@
 	<div class="col-xs-12">
 		<ul class="nav nav-tabs" id="modTab" style="margin-bottom:0px;margin-left:5px;border-bottom: none;">
 	        <li class="{{ Request::is('user-management') ? 'active' : '' }}">
-	        	<a id="tabEmployee" href="{{ url('user-management') }}">ব্যবহারকারীর তালিকা</a>
+	        	<a id="tabEmployee" href="{{ url('user-management') }}">User List</a>
 	        </li>
 	        <li class="{{ Request::is('user-management/create') ? 'active' : '' }}">
-	        	<a id="tabEmployee" href="{{ url('user-management/create') }}">নতুন ব্যবহারকারী</a>
+	        	<a id="tabEmployee" href="{{ url('user-management/create') }}">New User</a>
 	        </li>
 		</ul>
 		<div class="tab-content rendering-content">
@@ -25,7 +25,7 @@
 				@if($users->count())
 					@include('user.views._table')
 	            @else
-					<h3 class="text-center">কোনো ব্যাবহারকারী খুঁজে পাওয়া যায় নি</h3>
+					<h3 class="text-center">No User Found</h3>
 	            @endif
 			</div>
 			<div class="tab-pane{{ Request::is('user-management/create') ? 'active' : '' }}" id="tabNewEmployee">

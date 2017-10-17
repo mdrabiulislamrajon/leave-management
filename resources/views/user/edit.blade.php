@@ -3,7 +3,7 @@
 @extends('layouts.master')
 
 @include('layouts.common.title', [
-	'title' => 'ব্যবহারকারীর তথ্য পরিবর্তন / সংশোধন করুন',
+	'title' => 'Modify / correct user information',
 	'link' => 'User Management &nbsp;>&nbsp; Edit User'
 ])
 
@@ -12,10 +12,10 @@
 	<div class="col-xs-12">
 		<ul class="nav nav-tabs" id="modTab" style="margin-bottom:0px;margin-left:5px;border-bottom: none;">
 	        <li>
-	        	<a id="tabEmployee" href="{{ url('user-management') }}">ব্যবহারকারীর তালিকা</a>
+	        	<a id="tabEmployee" href="{{ url('user-management') }}">User List</a>
 	        </li>
 	        <li>
-	        	<a id="tabEmployee" href="{{ url('user-management/create') }}">নতুন ব্যবহারকারী</a>
+	        	<a id="tabEmployee" href="{{ url('user-management/create') }}">New User</a>
 	        </li>
 		</ul>
 		<div class="tab-content rendering-content">

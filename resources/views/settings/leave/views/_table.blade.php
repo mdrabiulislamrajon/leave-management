@@ -2,10 +2,10 @@
     <table class="table table-striped table-hover datatable">
         <thead>
             <tr>
-            	<th>ছুটির বিবরণ</th>
-                <th>শুরুর তারিখ</th>
-                <th>শেষের তারিখ</th>
-                <th>বছর</th>
+            	<th>Leave Description </th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Year</th>
                 <th style="width: 15%;"></th>
             </tr>
         </thead>

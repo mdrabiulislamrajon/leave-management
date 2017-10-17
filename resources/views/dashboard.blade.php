@@ -2,7 +2,7 @@
 
 @extends('layouts.master')
 
-@include('layouts.common.title', ['title' => 'প্রথম পাতা / ড্যাশবোর্ড', 'link' => 'Dashboard'])
+@include('layouts.common.title', ['title' => 'Home Page / Dashboard', 'link' => 'Dashboard'])
 
 @section('content')
 @if($user->type == 'admin')
@@ -77,7 +77,7 @@
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12">
 		<h3 class="text-center text-green" style="margin-bottom: 20px;">
-			বাৎসরিক সরকারি/প্রাতিষ্ঠানিক ছুটির তালিকা
+			Annual official / institutional holiday list
 		</h3>
         <div id="calendar" style="background: #fff; padding: 10px; border-radius: 5px;">
         	<!-- displays calendar here -->
@@ -101,10 +101,10 @@
             buttonText: {//This is to add icons to the visible buttons
                 prev: "<span class='fa fa-caret-left'></span>",
                 next: "<span class='fa fa-caret-right'></span>",
-                today: 'আজ',
-                month: 'মাসিক',
-                week: 'সাপ্তাহিক',
-                day: 'দৈনিক'
+                today: 'Today',
+                month: 'Monthly',
+                week: 'Weekly',
+                day: 'Days'
             },
             events: {!! json_encode( count($calendar->generate()) ? $calendar->generate() : [] ) !!},
             droppable: false,

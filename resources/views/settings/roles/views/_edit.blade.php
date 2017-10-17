@@ -4,7 +4,7 @@
     <div class="row clearfix" style="margin-bottom: 25px;">
         <div class="form-group{{ $errors->has('name')  ? ' has-error' : '' }}">
             <div class="col-md-3 text-right">
-                <label for="name">পদবীর নাম (ইংরেজিতে)<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="name">Name (English)<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input type="text" name="name"  class="form-control" id="name"  value="{{ old('name') ? : $role->name }}">
@@ -17,7 +17,7 @@
     <div class="row clearfix" style="margin-bottom: 25px;">
         <div class="form-group{{ $errors->has('text')  ? ' has-error' : '' }}">
             <div class="col-md-3 text-right">
-                <label for="text">পদবীর নাম (বাংলায়)<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="text">Name(Bengali)<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input type="text" name="text"  class="form-control" id="text"  value="{{ old('text') ? : $role->text }}">
@@ -30,7 +30,7 @@
     <div class="row clearfix" style="margin-bottom: 25px;">
         <div class="form-group{{ $errors->has('parent_id')  ? ' has-error' : '' }}">
             <div class="col-md-3 text-right">
-                <label for="parent_id">নিকটস্থ উর্ধতন পদবি<small style="color: red; font-size: 1.2em;">*</small></label>
+                <label for="parent_id">Immediate senior Officer name<small style="color: red; font-size: 1.2em;">*</small></label>
             </div>
             <div class="col-md-5">
                 <input id="cc" value="{{ old('parent_id') ? : $role->parent_id }}" style="width: 430px;">
@@ -43,7 +43,7 @@
     <div class="row">
         <div class="col-md-8 text-right">
             <a class="btn btn-link" style="margin-right:8px;" href="{{ route('roles.authorizations.edit', [$role]) }}">
-                অনুমোদনকারী উর্ধতন পদবি পরিবর্তন
+                Change Leave Approval Senior Officers 
             </a>
             </button><button class="btn btn-default" style="margin-right:8px;" type="reset">
                 {!! config('leave.buttons.btn_reset') !!}
