@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Applications\ApplicationFormRequest;
 use Illuminate\Http\Request;
 
 class ApplyController extends Controller
@@ -13,7 +14,7 @@ class ApplyController extends Controller
         return view('applications.create', compact('authorizers'));
     }
 
-    public function store(Request $request)
+    public function store(ApplicationFormRequest $request)
     {
         $authorizer = $request->user()->load('role.authorizers');
         $roles = $authorizer->role->authorizers;
@@ -31,6 +32,6 @@ class ApplyController extends Controller
         }
 
         return redirect('profile/applications')
-            ->withSuccess('আপনার ছুটির আবেদনপত্র সাবমিট করা হয়েছে |');
+            ->withSuccess('Submit Your Leave Application');
     }
 }

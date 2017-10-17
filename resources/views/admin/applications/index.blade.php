@@ -37,8 +37,9 @@
 									<label class="sr-only" for="">label</label>
 									<select name="status" id="" class="form-control">
 										<option value="">Select Leave Status</option>
-										<option value="2">Approved Leave List</option>
-										<option value="1">Pending Leave List</option>
+										<option value="2">Disapproved Leave List</option>
+										<option value="0">Pending Leave List</option>
+										<option value="1">Approved Leave List</option>
 									</select>
 								</div>
 								<div class="form-group">
@@ -53,7 +54,7 @@
 									</select>
 								</div>
 								<button type="submit" class="btn btn-primary">
-									<i class="fa fa-search"></i> সার্চ করুন
+									<i class="fa fa-search"></i> Search
 								</button>
 							</form>
 						</div>

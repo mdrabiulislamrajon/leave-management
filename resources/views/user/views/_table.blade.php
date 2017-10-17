@@ -6,7 +6,7 @@
                 <th>User Name</th>
                 <th>Mobile Number</th>
                 <th>User Designation</th>
-                <th>Sddress</th>
+                <th>Address</th>
                 <th>Current status</th>
                 <th style="width: 9%;"></th>
             </tr>

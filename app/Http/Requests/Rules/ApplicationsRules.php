@@ -12,6 +12,8 @@ class ApplicationsRules extends RulesAbstract
             'reason' => 'required|min:4',
             'type_id' => 'required',
             'no_of_days' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
             'vacation_address' => 'required',
             'authorizer_id'    => 'required|exists:roles,id'
         ];

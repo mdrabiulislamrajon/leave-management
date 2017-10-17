@@ -1,5 +1,5 @@
 <?php echo $__env->make('layouts.common.title', [
-	'title' => 'আপনার ছুটির জন্য আবেদন করুন',
+	'title' => 'Apply For Your Leave',
 	'link' => 'User Management &nbsp;>&nbsp; User List'
 ], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
@@ -8,7 +8,7 @@
 	<div class="col-xs-12">
 		<ul class="nav nav-tabs" id="modTab" style="margin-bottom:0px;margin-left:5px;border-bottom: none;">
 		    <li class="<?php echo e(Request::is('apply') ? 'active' : ''); ?>">
-		    	<a id="tabEmployee" href="<?php echo e(url('apply')); ?>">ছুটির আবেদনপত্র</a>
+		    	<a id="tabEmployee" href="<?php echo e(url('apply')); ?>">Leave Application</a>
 		    </li>
 		</ul>
 		<div class="tab-content rendering-content">

@@ -2,16 +2,18 @@
 
 return [
     'type' => [
-        1 => 'অর্জিত ছুটি ',
-        2 => 'মেডিকেল ছুটি ',
-        3 => 'সাময়িক ছুটি',
-        4 => 'বিনাবেতনে ছুটি'
+        1 => 'Casual Leave ',
+        2 => 'Sick Leave',
+        3 => 'Festival Holidays',
+        4 => 'Annual Leave',
+        5 => 'Unpaid Leave'
     ],
     'leaves' => [
-        1 => 50,
-        2 => 13,
+        1 => 20,
+        2 => 10,
         3 => 7,
-        4 => 10
+        4 => 10,
+        5 => 10
     ],
     'buttons' => [
         'btn_save'  => '<i class="fa fa-save"></i> যোগ করুন',

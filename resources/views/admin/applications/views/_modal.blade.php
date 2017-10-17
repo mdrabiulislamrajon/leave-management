@@ -12,6 +12,7 @@
                         <span class="label label-success" style="padding: 4px 6px;">Leave Type: {{ config("leave.type." . $leave->type_id) }}</span>
                         <br><br>
                         <span class="label label-primary" style="padding: 6px 6px;">Final Status: {{ permission($leave->status) }}
+                        </span>
                         <br><br>
                         <strong>leave reason:</strong>
                         {{ $leave->reason }}

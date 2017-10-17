@@ -13,6 +13,7 @@
                         <br><br>
                         <span class="label label-primary" style="padding: 6px 6px;">Final Status: <?php echo e(permission($leave->status)); ?>
 
+                        </span>
                         <br><br>
                         <strong>leave reason:</strong>
                         <?php echo e($leave->reason); ?>

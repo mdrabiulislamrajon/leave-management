@@ -11,7 +11,7 @@
                         <br><br>
                         <span class="label label-success" style="padding: 4px 6px;">Leave Type: <?php echo e(config("leave.type." . $leave->type_id)); ?></span>
                         <br><br>
-                        <span class="label label-primary" style="padding: 6px 6px;">Final Status: <?php echo e(! $leave->status ? 'Approved' : 'Disapproved'); ?></span>
+                        <span class="label label-primary" style="padding: 6px 6px;">Final Status: <?php echo e(permission($leave->status)); ?></span>
                     </p>
                     <br><br>
                     <table class="table table-condensed table-bordered table-striped" style="font-size:14px;">
@@ -40,11 +40,12 @@
                         <div class="form-group" style="width: 100%; padding-left: 20px; margin-bottom: 15px;">
                             <select name="status" class="form-control" style="width: 100%;">
                                 <option value="1">Approved</option>
+                                <option value="0">Pending</option>
                                 <option value="2">Disapproved</option>
                             </select>
                         </div>
                         <div class="form-group" style="width: 100%; padding-left: 20px; margin-bottom: 15px;">
-                            <textarea name="note" id="note" rows="3" style="width: 100%;" class="form-control" placeholder="Your Ppinion"></textarea>
+                            <textarea name="note" id="note" rows="3" style="width: 100%;" class="form-control" placeholder="Your Opinion"></textarea>
                         </div>
                         <div class="form-group" style="width: 100%; padding-left: 20px; margin-top: 10px;">
                             <button type="submit" class="btn btn-primary">Save</button>
